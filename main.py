@@ -1,47 +1,59 @@
 import math
 
 class Circle:
-    def area(r):
+    def area(r: int | float) -> int | float:
         '''Takes radius of circle, returns its area'''
+        if (not isinstance(r, (int, float))):
+            raise TypeError('incorrect data type of input')
         if (r <= 0):
             raise ValueError('radius cannot be equal or less than 0')
         return math.pi * r * r
     
-    def perimeter(r):
+    def perimeter(r: int | float) -> int | float:
         '''Takes radius of circle, returns its perimeter'''
+        if (not isinstance(r, (int, float))):
+            raise TypeError('incorrect data type of input')
         if (r <= 0):
             raise ValueError('radius cannot be equal or less than 0')
         return 2 * math.pi * r
 
 class Rectangle:
-    def area(a, b):
+    def area(a: int | float, b: int | float) -> int | float:
         '''Takes a and b - sides of a rectangle, returns area of a rectangle'''
+        if (not isinstance(a, (int, float))) or (not isinstance(b, (int, float))):
+            raise TypeError('incorrect data type of input')
         if (a <= 0 or b <= 0):
             raise ValueError('sides cannot be equal or less than 0')
         return a * b
 
-    def perimeter(a, b):
+    def perimeter(a: int | float, b: int | float) -> int | float:
         '''Takes a and b - sides of a rectangle, returns perimeter of a rectangle'''
+        if (not isinstance(a, (int, float))) or (not isinstance(b, (int, float))):
+            raise TypeError('incorrect data type of input')
         if (a <= 0 or b <= 0):
             raise ValueError('sides cannot be equal or less than 0')
         return 2 * (a + b)
 
 class Square:
-    def area(a):
+    def area(a: int | float) -> int | float:
         '''Takes side of square, returns its area'''
+        if (not isinstance(a, (int, float))):
+            raise TypeError('incorrect data type of input')
         if (a <= 0):
             raise ValueError('side cannot be equal or less than 0')
         return a * a
 
 
-    def perimeter(a):
+    def perimeter(a: int | float) -> int | float:
         '''Takes side of square, returns its perimeter'''
+        if (not isinstance(a, (int, float))):
+            raise TypeError('incorrect data type of input')
         if (a <= 0):
             raise ValueError('side cannot be equal or less than 0')
         return 4 * a
 
 class Triangle:
-    def area(a, h):
+    def area(a: int | float, h: int | float) -> int | float:
         '''
         Returns area of triangle.
             
@@ -52,11 +64,13 @@ class Triangle:
             Result:
                 area (float): the area of this triangle
         '''
+        if (not isinstance(a, (int, float))) or (not isinstance(h, (int, float))):
+            raise TypeError('incorrect data type of input')
         if (a <= 0 or h <= 0):
             raise ValueError('side or height cannot be equal or less than 0')
         return a * h / 2
 
-    def perimeter(a, b, c):
+    def perimeter(a: int | float, b: int | float, c: int | float) -> int | float:
         '''
         Returns perimeter of triangle.
 
@@ -66,6 +80,8 @@ class Triangle:
             Result:
                 perimeter (int | float): the perimeter of this triangle
         '''
+        if (not isinstance(a, (int, float))) or (not isinstance(b, (int, float))) or (not isinstance(c, (int, float))):
+            raise TypeError('incorrect data type of input')
         if (a <= 0 or b <= 0 or c <= 0):
             raise ValueError('sides cannot be equal or less than 0')
         
