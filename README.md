@@ -25,6 +25,12 @@ message: Initial commit
 commit: 67a553b8e26edb0ef4f253953ad24cc8ef67b7bc  
 message: .gitignore file was added  
 
+**November, 13, 2024, 00:57:25 +0300**  
+commit: fd21fc06d0b1787e6dba1ad861434c7cd1213f94  
+message: README file was completed  
 
+**November, 13, 2024, 13:34:36 +0300**  
+commit: 098f8f5eed6212dd84aa86373de597282e29783d  
+message: type checking and annotations was added to the functions, new negative tests were added  
 
 
